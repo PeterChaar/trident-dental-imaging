@@ -20,7 +20,6 @@ a = Analysis(
         'pydicom.encoders.pylibjpeg',
         'cv2',
         'numpy',
-        'twain',  # optional; only loads on demand
     ],
     hookspath=[],
     hooksconfig={},

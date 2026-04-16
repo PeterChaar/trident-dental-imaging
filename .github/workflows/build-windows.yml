@@ -23,7 +23,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pyinstaller twain
+          pip install pyinstaller
+          # twain is optional; skip if no wheel exists for this Python version
+          pip install twain || echo "twain not installable on CI Python — handled at runtime"
 
       - name: Smoke test (imports + DB init)
         run: |
