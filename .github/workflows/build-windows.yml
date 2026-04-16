@@ -24,8 +24,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pyinstaller
-          # twain is optional; skip if no wheel exists for this Python version
-          pip install twain || echo "twain not installable on CI Python — handled at runtime"
+          # twain is optional and only needed at runtime on the clinic PC (Windows + sensor drivers).
+          # No wheel exists for Python 3.11, and the app handles ImportError gracefully.
 
       - name: Smoke test (imports + DB init)
         run: |
