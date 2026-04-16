@@ -1,9 +1,0 @@
-{
-  "backup_folder": "",
-  "auto_backup_on_close": false,
-  "keep_last_backups": 10,
-  "clinic_name": "Test Clinic",
-  "doctor_name": "",
-  "language": "en",
-  "first_run_done": true
-}
